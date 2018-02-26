@@ -13,3 +13,5 @@ Hier een voorbeeld van hoe je de plotjes zou kunnen maken. De procedure is vrij 
 ``` bash
 python -m SimpleHTTPServer
 ```
+
+Deze website is ook toegankelijk op Github Pages: https://compsy.github.io/wkz-example-plots/.
