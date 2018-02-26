@@ -1,0 +1,344 @@
+svg {
+  -webkit-backface-visibility: hidden;
+}
+.axis path, .axis line {
+  fill: none;
+  stroke: #666;
+  shape-rendering: crispEdges;
+}
+.axis text {
+  stroke: #444;
+  stroke-width: 0.1px;
+}
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+@media only screen and (max-width: 1060px) {
+  .overlay {
+    display: none;
+  }
+}
+/* hgiNetwork */
+.network line {
+  stroke-width: 1.5px;
+  stroke: #7f7f7f;
+  opacity: 0.5;
+}
+.labelNode text {
+  font-size: 90%;
+  fill: #333;
+}
+.link text.positive {
+  font: 18px Courier New;
+  fill: #333;
+}
+/*green; }*/
+.link text.negative {
+  font: 18px Courier New;
+  fill: #333;
+}
+/*#862A51; }*/
+.node.Positief {
+  fill: green;
+}
+.node.Negatief {
+  fill: #862a51;
+}
+/* ea8e55 */
+.node.Neutraal {
+  fill: #1447e7;
+}
+.link path.arrow {
+  fill: #666;
+  opacity: 1;
+}
+.link path.arclink {
+  fill: none;
+  stroke: #7f7f7f;
+  stroke-width: 1.5px;
+  opacity: 0.5;
+}
+/* hgiPie */
+.arc {
+  transition: transform 100ms linear;
+  -moz-transition-property: transform 250ms linear;
+  -webkit-transition-property: transform 250ms linear;
+  -o-transition-property: transform 250ms linear;
+}
+.arc:hover {
+  transform: scale(1.05);
+}
+.pie text.label {
+  text-anchor: middle;
+  fill: white;
+  font-size: 116%;
+}
+.pie text.legend {
+  stroke: #ccc;
+  stroke-width: 0.2px;
+}
+/* hgiBar */
+#barOpgewektheid .bar {
+  fill: #1e6c22;
+}
+#barOpgewektheid .bar:hover {
+  fill: steelblue;
+}
+#barTekortSchieten .bar {
+  fill: #c10;
+}
+#barTekortSchieten .bar:hover {
+  fill: steelblue;
+}
+#barBijzonder .title {
+  font-weight: bold;
+}
+#barBijzonder .bar {
+  fill: #99182c;
+}
+#barBijzonder .bar:hover {
+  fill: steelblue;
+}
+/* hgiPairedHistogram */
+.bar1, .legend1 {
+  fill: #0a56b6;
+}
+.bar2, .legend2 {
+  fill: #862a51;
+}
+.bar1:hover, .bar2:hover {
+  fill: red;
+}
+.bars text.label {
+  fill: white;
+  font-size: 116%;
+}
+.bars line.errorbar {
+  stroke: #444;
+}
+#pairedPositief .bar1, #pairedPositief .legend1 {
+  fill: #1e6c22;
+}
+#pairedPositief .bar2, #pairedPositief .legend2 {
+  fill: #9ccb19;
+}
+#pairedNegatief .bar1, #pairedNegatief .legend1 {
+  fill: #0a56b6;
+}
+#pairedNegatief .bar2, #pairedNegatief .legend2 {
+  fill: #862a51;
+}
+#pairedPositief .bar1:hover, #pairedPositief .bar2:hover {
+  fill: steelblue;
+}
+#pairedNegatief .bar1:hover, #pairedNegatief .bar2:hover {
+  fill: red;
+}
+/* hgiHistogram */
+.bar {
+  fill: steelblue;
+}
+.bar:hover {
+  fill: red;
+}
+#histSlaap .bar {
+  fill: palevioletred;
+}
+#histSlaap .bar:hover {
+  fill: red;
+}
+.errorbar {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+/* hgiLine */
+.line, .y1 .line {
+  fill: none;
+  stroke: #1f77b4;
+  stroke-width: 1.5px;
+}
+.line, .y2 .line {
+  fill: none;
+  stroke: #aec7e8;
+  stroke-width: 1.5px;
+}
+.dot1 {
+  fill: #1f77b4;
+  stroke: #1f77b4;
+  stroke-width: 1px;
+  transition: stroke-width 250ms linear;
+  -moz-transition-property: stroke-width 250ms linear;
+  -webkit-transition-property: stroke-width 250ms linear;
+  -o-transition-property: stroke-width 250ms linear;
+}
+.dot2 {
+  fill: #aec7e8;
+  stroke: #aec7e8;
+  stroke-width: 1px;
+  transition: stroke-width 250ms linear;
+  -moz-transition-property: stroke-width 250ms linear;
+  -webkit-transition-property: stroke-width 250ms linear;
+  -o-transition-property: stroke-width 250ms linear;
+}
+.hover {
+  stroke-width: 5px !important;
+}
+.y1 text {
+  fill: #1f77b4;
+}
+.y2 text {
+  fill: #aec7e8;
+}
+line.verticalLine {
+  stroke: #999;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+text.verticalLine {
+  stroke: #444;
+  stroke-width: 0.1px;
+  font-size: 14px;
+}
+rect.verticalLineBGLabel {
+  fill: #f4f6ee;
+}
+#lineNegatief .y1 .line {
+  stroke: #0a56b6;
+}
+#lineNegatief .y2 .line {
+  stroke: #862a51;
+}
+#lineNegatief .y1 text {
+  fill: #0a56b6;
+}
+#lineNegatief .y2 text {
+  fill: #862a51;
+}
+#lineNegatief .dot1 {
+  fill: #0a56b6;
+  stroke: #0a56b6;
+  stroke-width: 1px;
+}
+#lineNegatief .dot2 {
+  fill: #862a51;
+  stroke: #862a51;
+  stroke-width: 1px;
+}
+#linePositief .y1 .line {
+  stroke: #1e6c22;
+}
+#linePositief .y1 text {
+  fill: #1e6c22;
+}
+#linePositief .y2 .line {
+  stroke: #9ccb19;
+}
+#linePositief .y2 text {
+  fill: #9ccb19;
+}
+#linePositief .dot1 {
+  fill: #1e6c22;
+  stroke: #1e6c22;
+  stroke-width: 1px;
+}
+#linePositief .dot2 {
+  fill: #9ccb19;
+  stroke: #9ccb19;
+  stroke-width: 1px;
+}
+#lineEigenwaarde .y2 .line {
+  stroke: darkorange;
+}
+#lineEigenwaarde .y1 .line {
+  stroke: #e3170d;
+}
+#lineEigenwaarde .y2 text {
+  fill: darkorange;
+}
+#lineEigenwaarde .y1 text {
+  fill: #e3170d;
+}
+#lineEigenwaarde .dot2 {
+  fill: darkorange;
+  stroke: darkorange;
+  stroke-width: 1px;
+}
+#lineEigenwaarde .dot1 {
+  fill: #e3170d;
+  stroke: #e3170d;
+  stroke-width: 1px;
+}
+#lineOngemak .y1 .line {
+  stroke: #99182c;
+}
+#lineOngemak .y2 .line {
+  stroke: #f30;
+}
+#lineOngemak .y1 text {
+  fill: #99182c;
+}
+#lineOngemak .y2 text {
+  fill: #f30;
+}
+#lineOngemak .dot1 {
+  fill: #99182c;
+  stroke: #99182c;
+  stroke-width: 1px;
+}
+#lineOngemak .dot2 {
+  fill: #f30;
+  stroke: #f30;
+  stroke-width: 1px;
+}
+#lineHoeGaatHet .y1 .line {
+  stroke: #fc1;
+}
+#lineHoeGaatHet .y2 .line {
+  stroke: #dd7500;
+}
+#lineHoeGaatHet .y1 text {
+  fill: #fc1;
+}
+#lineHoeGaatHet .y2 text {
+  fill: #dd7500;
+}
+#lineHoeGaatHet .dot1 {
+  fill: #fc1;
+  stroke: #fc1;
+  stroke-width: 1px;
+}
+#lineHoeGaatHet .dot2 {
+  fill: #dd7500;
+  stroke: #dd7500;
+  stroke-width: 1px;
+}
+/* hgiBubble */
+.bubble {
+  fill: steelblue;
+}
+#bubbleEigenwaarde .bubble {
+  fill: darkorange;
+}
+/* hgiScatter */
+.scatter path.line {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 1.5px;
+}
+#scatterHoeGaatHet .bubble {
+  fill: #dd7500;
+  stroke: #dd7500;
+  stroke-width: 1px;
+}
+#scatterOnrust .bubble {
+  fill: #862a51;
+  stroke: #862a51;
+  stroke-width: 1px;
+}
+.percentage {
+  fill: #666;
+  font-size: 30px;
+}
+

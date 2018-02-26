@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/d3hgi.css">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="assets/js/d3hgi.js"></script>
+  <script src="assets/js/d3hgi_render.js"></script>
+  <script src="assets/js/loess.js"></script>
+  <title></title>
+</head>
+
+<body>
+  <div>
+
+    <!-- Bolletjes plot (activiteit en plezierigheid) -->
+    <div id="bubbleActiviteit" class="svg-container centered-svg"></div>
+
+    <!-- Piechart plot plot (Hoeveel tijd besteede ik waar?) -->
+    <div id="pieWaar" class="svg-container"></div>
+
+    <!-- Piechart plot plot (Hoeveel tijd besteede ik waaraan?) -->
+    <div id="pieWat" class="svg-container"></div>
+
+
+    <!-- Is er iets bijzonders gebeurd? -->
+    <div id="barBijzonder" class="svg-container centered-svg"></div>
+
+    <!-- Lichamelijk ongemak vs ik ben van slag -->
+    <div id="lineOngemak" class="svg-container centered-svg"></div>
+
+
+    <!-- Opgewektheid and Ontspanning (positive variables) -->
+    <div id="pairedPositief" class="svg-container"></div>
+
+    <!-- Somberheid and Onrust (negative variables) -->
+    <div id="pairedNegatief" class="svg-container"></div>
+
+
+    <!-- Slaapkwaliteit -->
+    <div id="histSlaap" class="svg-container"></div>
+
+    <!-- Slaaplengte (piechart) -->
+    <div id="pieSlaap" class="svg-container" style="margin-top:-105px;margin-bottom:-40px"></div>
+
+
+    <!-- Eigenwaarde and gepieker -->
+    <div id="lineEigenwaarde" class="svg-container centered-svg"></div>
+
+    <!-- eigenwaarde in bubblechart -->
+    <div id="bubbleEigenwaarde" class="svg-container"></div>
+
+
+    <!-- In gezelschap of alleen? (piechart) -->
+    <div id="pieGezelschap" class="svg-container svg-smallpie"></div>
+
+    <!-- Opgewektheid -->
+    <div id="barOpgewektheid" class="svg-container"></div>
+
+    <!-- Gevoel te kort te schieten -->
+    <div id="barTekortSchieten" class="svg-container"></div>
+
+
+    <!-- Buitenzijn vs beweging -->
+    <div id="lineBeweging" class="svg-container centered-svg"></div>
+
+    <!-- Beweging bars -->
+    <div id="barBeweging" class="svg-container centered-svg"></div>
+
+    <!-- Somberheid en beweging scatter + loess -->
+    <div id="scatterSomber" class="svg-container centered-svg"></div>
+
+
+    <!-- Eigenfactor en Hoe gaat het met u? -->
+    <div id="lineHoeGaatHet" class="svg-container centered-svg"></div>
+
+    <!-- Eigenfactor en Hoe gaat het met u? (scatter + loess) -->
+    <div id="scatterHoeGaatHet" class="svg-container"></div>
+
+    <!-- Eigenfactor en onrust? (scatter + loess) -->
+    <div id="scatterOnrust" class="svg-container"></div>
+
+
+    <!-- Ontspanning and opgewektheid -->
+    <div id="linePositief" class="svg-container"></div>
+
+    <!-- Somberheid and onrust -->
+    <div id="lineNegatief" class="svg-container"></div>
+  </div>
+  <script type="text/javascript">
+    $(function() {
+
+      $.ajax({
+        url: "data/example_data.json",
+        async: true,
+        dataType: "json",
+        method: 'GET'
+      }).done(function(response) {
+        calculate_data(response);
+        render_bubbleActiviteit();
+        render_pieWaar();
+        render_pieWat();
+
+        render_barBijzonder();
+        render_lineOngemak();
+
+        render_pairedPositief();
+        render_pairedNegatief();
+        render_histSlaap();
+        render_pieSlaap();
+
+        render_lineEigenwaarde();
+        render_bubbleEigenwaarde();
+
+        render_pieGezelschap();
+        render_barOpgewektheid();
+        render_barTekortSchieten();
+
+        render_lineBeweging();
+        render_barBeweging();
+        render_scatterSomber();
+
+        render_lineHoeGaatHet();
+        render_scatterHoeGaatHet();
+        render_scatterOnrust();
+
+        render_linePositief();
+        render_lineNegatief();
+      }).fail(function(a, b) {
+        console.log('Something went wrong')
+        console.log(a)
+        console.log(b)
+      });
+    });
+  </script>
+</body>
+
+</html>
