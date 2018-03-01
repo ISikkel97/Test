@@ -19,4 +19,4 @@ Als je nu naar de website gaat (het bestand `index.html` opent) dan zou je de ge
 python -m SimpleHTTPServer
 ```
 
-Als je dan naar localhost:8080 gaat zou je de website ook moeten kunnen zien, ongeacht de browser.  Verder heb ik GitHub pages aangezet voor deze repository, en is deze website is ook toegankelijk online: https://compsy.github.io/wkz-example-plots/.
+Als je dan naar localhost:8080 gaat zou je de website ook moeten kunnen zien, ongeacht de browser.  Verder heb ik GitHub pages aangezet voor deze repository, en is deze website is ook toegankelijk online: https://compsy.github.io/demo-wkz-example-plots/.
